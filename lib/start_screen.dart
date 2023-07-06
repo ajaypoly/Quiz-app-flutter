@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen( this.startQuiz,{super.key});
+  const StartScreen(this.startQuiz, {super.key});
 
-final void Function() startQuiz;
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +20,12 @@ final void Function() startQuiz;
           const SizedBox(
             height: 70,
           ),
-          const Text(
+          Text(
             "Learn Flutter in a fun way",
-            style: TextStyle(fontSize: 24, color: Colors.white),
+            style: GoogleFonts.fasthand(
+              fontSize: 24,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(
             height: 30,
@@ -32,9 +36,9 @@ final void Function() startQuiz;
               foregroundColor: Colors.white,
               backgroundColor: const Color.fromARGB(66, 219, 202, 202),
             ),
-            child:const  Row(
+            child: const Row(
               mainAxisSize: MainAxisSize.min,
-              children:  [
+              children: [
                 Text("Start quiz"),
                 Icon(Icons.arrow_circle_right_outlined),
               ],
